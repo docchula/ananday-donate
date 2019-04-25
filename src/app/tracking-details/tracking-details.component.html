@@ -6,7 +6,7 @@
     <div class="box">
       <div class="columns">
         <div class="column is-2 has-text-centered">
-          <img src="/assets/01-registered.png">
+          <span class="icon is-large has-text-success"><i class="fa-3x fas fa-check-square"></i></span>
         </div>
         <div class="column is-10">
           <strong>{{ 'tracking.details.registered' | translate }}</strong>
@@ -56,7 +56,7 @@
     <div class="box">
       <div class="columns">
         <div class="column is-2 has-text-centered">
-          <img [src]="tracking.check | checkStatus" [class.not-checked]="!tracking.check">
+          <span class="icon is-large" [class.not-checked]="!tracking.check" [class.has-text-danger]="tracking.check && !tracking.check.pass" [class.has-text-success]="tracking.check && tracking.check.pass"><i class="fa-3x fas fa-money-check-alt"></i></span>
         </div>
         <div class="column is-10">
           <strong>{{ 'tracking.details.slip' | translate }}</strong>
@@ -70,7 +70,7 @@
     <div class="box" *ngIf="tracking.register.badge_amount > 0">
       <div class="columns">
         <div class="column is-2 has-text-centered">
-          <img src="/assets/04-badge.png" [class.not-checked]="!tracking.badge">
+          <span class="icon is-large has-text-success"><i class="fa-3x fas fa-gift" [class.not-checked]="!tracking.badge"></i></span>
         </div>
         <div class="column is-10">
           <strong>{{ 'tracking.details.badge' | translate }}</strong>
@@ -81,7 +81,7 @@
     <div class="box" *ngIf="tracking.register.badge_amount > 0">
       <div class="columns">
         <div class="column is-2 has-text-centered">
-          <img src="/assets/05-shipping.png" [class.not-checked]="!tracking.badge_shipping">
+          <span class="icon is-large has-text-success"><i class="fa-3x fas fa-shipping-fast" [class.not-checked]="!tracking.badge_shipping"></i></span>
         </div>
         <div class="column is-10">
           <strong>{{ 'tracking.details.badge_shipping' | translate }}</strong>
@@ -95,7 +95,7 @@
     <div class="box" *ngIf="tracking.register.receipt">
       <div class="columns">
         <div class="column is-2 has-text-centered">
-          <img src="/assets/06-receipt.png" [class.not-checked]="!tracking.receipt">
+          <span class="icon is-large has-text-success"><i class="fa-3x fas fa-receipt" [class.not-checked]="!tracking.receipt"></i></span>
         </div>
         <div class="column is-10">
           <strong>{{ 'tracking.details.receipt' | translate }}</strong>
@@ -109,7 +109,7 @@
     <div class="box" *ngIf="tracking.register.receipt">
       <div class="columns">
         <div class="column is-2 has-text-centered">
-          <img src="/assets/05-shipping.png" [class.not-checked]="!tracking.receipt_shipping">
+          <span class="icon is-large has-text-success"><i class="fa-3x fas fa-envelope" [class.not-checked]="!tracking.receipt_shipping"></i></span>
         </div>
         <div class="column is-10">
           <strong>{{ 'tracking.details.receipt_shipping' | translate }}</strong>
