@@ -1,4 +1,5 @@
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="container">
   <div class="navbar-brand">
     <a class="navbar-item" routerLink="/">
       {{ 'common.branding' | translate }}
@@ -16,5 +17,15 @@
       <a class="navbar-item" routerLink="/track">{{ 'common.navbar.tracking' | translate }}</a>
     </div>
   </div>
+  </div>
 </nav>
 <router-outlet></router-outlet>
+<footer class="footer">
+  <div class="content has-text-centered container">
+    <p>
+      {{ 'common.footer.title' | translate }}
+      <small class="has-text-grey">{{ 'common.footer.subtitle' | translate }}</small>
+      | <a href="https://www.facebook.com/anandamahidol.day/"><span class="icon"><i class="fas fa-facebook"></i></span> ANAN DAY</a>
+    </p>
+  </div>
+</footer>
