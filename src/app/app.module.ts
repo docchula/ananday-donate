@@ -30,6 +30,7 @@ import { TrackingComponent } from './tracking/tracking.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 export const HttpLoaderFactory = (http: HttpClient) => {
   return new TranslateHttpLoader(http);
@@ -61,7 +62,8 @@ export const HttpLoaderFactory = (http: HttpClient) => {
     AngularFireStorageModule,
     AngularFireAuthModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    FontAwesomeModule
   ],
   providers: [
     {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Title } from '@angular/platform-browser';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 @Component({
   selector: 'and-root',
@@ -9,6 +10,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent {
   collapse = true;
+  faFacebook = faFacebook;
   constructor(private translate: TranslateService, private title: Title) {
     translate.setDefaultLang('th');
     translate.use('th');

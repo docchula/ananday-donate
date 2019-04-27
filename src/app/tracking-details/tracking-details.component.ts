@@ -3,6 +3,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap } from 'rxjs/operators';
+import { faCheckSquare, faMoneyCheckAlt, faGift, faShippingFast, faReceipt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'and-tracking-details',
@@ -11,6 +12,12 @@ import { map, switchMap } from 'rxjs/operators';
 })
 export class TrackingDetailsComponent implements OnInit {
   tracking$: Observable<any>;
+  faCheckSquare = faCheckSquare;
+  faMoneyCheckAlt = faMoneyCheckAlt;
+  faGift = faGift;
+  faShippingFast = faShippingFast;
+  faReceipt = faReceipt;
+  faEnvelope = faEnvelope;
 
   constructor(
     private afd: AngularFireDatabase,
