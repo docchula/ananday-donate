@@ -32,7 +32,7 @@
     "firebase": "5.11.1",
     "ng-recaptcha": "4.2.1",
     "rxjs": "6.5.2",
-    "rxjs-compat": "6.5.1",
+    "rxjs-compat": "6.5.2",
     "zone.js": "0.8.29"
   },
   "devDependencies": {
