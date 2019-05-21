@@ -28,7 +28,7 @@
     "@ngx-translate/core": "11.0.1",
     "@ngx-translate/http-loader": "4.0.0",
     "bulma": "0.7.5",
-    "core-js": "2.6.5",
+    "core-js": "2.6.7",
     "firebase": "5.11.1",
     "ng-recaptcha": "4.2.1",
     "rxjs": "6.5.2",
