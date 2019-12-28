@@ -29,7 +29,7 @@
     "bulma": "0.8.0",
     "firebase": "7.6.1",
     "ng-recaptcha": "5.0.0",
-    "rxjs": "6.5.3",
+    "rxjs": "6.5.4",
     "zone.js": "0.10.2"
   },
   "devDependencies": {
