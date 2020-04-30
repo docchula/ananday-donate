@@ -15,7 +15,7 @@
     "D": "1.0.0",
     "axios": "0.19.2",
     "dataurl": "0.1.0",
-    "firebase-admin": "8.10.0",
+    "firebase-admin": "8.11.0",
     "firebase-functions": "3.6.0",
     "mime-types": "2.1.26",
     "randomstring": "1.1.5"
