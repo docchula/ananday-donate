@@ -1,9 +1,22 @@
-build:
-  image: node:10-alpine
-  stage: build
+test:karma:
+  stage: test
+  image: circleci/node:12-browsers
+  script:
+    - npm ci
+    - npx ng test --progress false --watch false
+
+lint:
+  stage: test
+  image: node:12-alpine
   script:
     - npm ci
     - npx ng lint
+
+build:
+  image: node:12-alpine
+  stage: build
+  script:
+    - npm ci
     - npx ng build --prod
   artifacts:
     paths:
@@ -25,5 +38,6 @@ deploy:
     - firebase deploy --only hosting --token "$FIREBASE_TOKEN"
 
 stages:
+  - test
   - build
   - deploy

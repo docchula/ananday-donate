@@ -4,8 +4,11 @@
     "outDir": "../out-tsc/spec",
     "types": [
       "jasmine",
-      "node"
-    ]
+      "node",
+      "grecaptcha"
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "files": [
     "test.ts",
