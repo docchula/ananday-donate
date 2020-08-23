@@ -16,7 +16,7 @@
     "axios": "0.20.0",
     "dataurl": "0.1.0",
     "firebase-admin": "9.1.1",
-    "firebase-functions": "3.9.1",
+    "firebase-functions": "3.11.0",
     "mime-types": "2.1.27",
     "randomstring": "1.1.5"
   },
