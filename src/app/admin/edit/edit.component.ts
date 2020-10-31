@@ -5,7 +5,7 @@ import { Observable, combineLatest } from 'rxjs';
 import { map, switchMap, first } from 'rxjs/operators';
 import { FirebaseApp } from '@angular/fire';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { database } from 'firebase/app';
+import firebase from 'firebase/app';
 import 'firebase/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
@@ -62,7 +62,7 @@ export class EditComponent implements OnInit {
       ref.update({
         check: {
           pass,
-          timestamp: database.ServerValue.TIMESTAMP,
+          timestamp: firebase.database.ServerValue.TIMESTAMP,
           checked_by: user.email.split('@')[0]
         }
       });
