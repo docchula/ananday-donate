@@ -24,7 +24,7 @@
     "@fortawesome/fontawesome-svg-core": "1.2.32",
     "@fortawesome/free-brands-svg-icons": "5.15.1",
     "@fortawesome/free-solid-svg-icons": "5.15.1",
-    "@ngneat/transloco": "2.19.2",
+    "@ngneat/transloco": "2.19.3",
     "bulma": "0.9.1",
     "firebase": "8.1.2",
     "rxjs": "6.6.3",
