@@ -28,7 +28,7 @@
     "bulma": "0.9.1",
     "firebase": "8.2.1",
     "rxjs": "6.6.3",
-    "tslib": "2.0.3",
+    "tslib": "2.1.0",
     "zone.js": "0.11.3"
   },
   "devDependencies": {
