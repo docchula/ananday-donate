@@ -6,11 +6,13 @@ describe('TrackingComponent', () => {
   let component: TrackingComponent;
   let fixture: ComponentFixture<TrackingComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [TrackingComponent]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [TrackingComponent]
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TrackingComponent);

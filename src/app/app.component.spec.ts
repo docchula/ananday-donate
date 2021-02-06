@@ -17,28 +17,39 @@ const getTranslocoModule = (config: Partial<TranslocoConfig> = {}) => {
 };
 
 describe('AppComponent', () => {
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [RouterTestingModule, FontAwesomeModule, getTranslocoModule()],
-      declarations: [AppComponent]
-    }).compileComponents();
-  }));
-  it('should create the app', waitForAsync(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
-  }));
-  it(`should have as collapse 'true'`, waitForAsync(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.collapse).toEqual(true);
-  }));
-  it(`should render footer with text 'ANAN DAY'`, waitForAsync(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('footer a').textContent).toContain(
-      'ANAN DAY'
-    );
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [RouterTestingModule, FontAwesomeModule, getTranslocoModule()],
+        declarations: [AppComponent]
+      }).compileComponents();
+    })
+  );
+  it(
+    'should create the app',
+    waitForAsync(() => {
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.debugElement.componentInstance;
+      expect(app).toBeTruthy();
+    })
+  );
+  it(
+    `should have as collapse 'true'`,
+    waitForAsync(() => {
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.debugElement.componentInstance;
+      expect(app.collapse).toEqual(true);
+    })
+  );
+  it(
+    `should render footer with text 'ANAN DAY'`,
+    waitForAsync(() => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+      const compiled = fixture.debugElement.nativeElement;
+      expect(compiled.querySelector('footer a').textContent).toContain(
+        'ANAN DAY'
+      );
+    })
+  );
 });
