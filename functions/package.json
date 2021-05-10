@@ -18,7 +18,7 @@
     "firebase-admin": "9.7.0",
     "firebase-functions": "3.13.2",
     "mime-types": "2.1.30",
-    "randomstring": "1.1.5"
+    "randomstring": "1.2.1"
   },
   "devDependencies": {
     "@types/axios": "0.14.0",
