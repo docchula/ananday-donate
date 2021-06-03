@@ -1,6 +1,6 @@
 test:karma:
   stage: test
-  image: circleci/node:12-browsers
+  image: circleci/node:16-browsers
   script:
     - npm ci
     - npx ng test --progress false --watch false
