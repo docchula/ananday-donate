@@ -223,12 +223,8 @@ export class RegisterComponent implements OnInit {
 
   submit(reCaptchaResponse: string) {
     const rawFormData = this.registerForm.value;
-    const {
-      receipt_same_details,
-      receipt_name,
-      receipt_address,
-      ...formData
-    } = rawFormData;
+    const { receipt_same_details, receipt_name, receipt_address, ...formData } =
+      rawFormData;
     if (formData.receipt) {
       if (receipt_same_details) {
         formData.receipt_name = formData.name;
