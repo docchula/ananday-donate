@@ -1,19 +1,19 @@
 test:karma:
   stage: test
-  image: circleci/node:12-browsers
+  image: circleci/node:14-browsers
   script:
     - npm ci
     - npx ng test --progress false --watch false
 
 lint:
   stage: test
-  image: node:12-alpine
+  image: node:14-alpine
   script:
     - npm ci
     - npx ng lint
 
 build:
-  image: node:12-alpine
+  image: node:14-alpine
   stage: build
   script:
     - npm ci
