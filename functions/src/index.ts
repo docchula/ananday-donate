@@ -1,5 +1,8 @@
 import * as functions from 'firebase-functions';
-import * as firebase from 'firebase-admin';
+// import * as firebase from 'firebase-admin';
+import { initializeApp } from 'firebase-admin/app';
+import { getDatabase, ServerValue } from 'firebase-admin/database';
+import { getStorage } from 'firebase-admin/storage';
 import axios from 'axios';
 import { generate } from 'randomstring';
 import { extension } from 'mime-types';
@@ -12,7 +15,7 @@ const dataurl = require('dataurl');
 //  response.send("Hello from Firebase!");
 // });
 
-firebase.initializeApp();
+const app = initializeApp();
 
 export const register = functions.https.onCall(async (data, context) => {
   const secret = functions.config().recaptcha.secret;
@@ -36,8 +39,7 @@ export const register = functions.https.onCall(async (data, context) => {
         capitalization: 'uppercase',
         readable: true
       });
-      const query = await firebase
-        .database()
+      const query = await getDatabase(app)
         .ref('donations')
         .orderByChild('track_code')
         .equalTo(code)
@@ -53,15 +55,13 @@ export const register = functions.https.onCall(async (data, context) => {
     const ext = extension(mimetype);
     const filename = `${code}.${ext}`;
     const filepath = `donations/${filename}`;
-    const stream = firebase
-      .storage()
+    const stream = getStorage(app)
       .bucket()
       .file(filepath)
       .createWriteStream();
     stream.write(slip_data);
     stream.end();
-    await firebase
-      .database()
+    await getDatabase(app)
       .ref('donations')
       .child(code)
       .update({
@@ -69,11 +69,10 @@ export const register = functions.https.onCall(async (data, context) => {
           ...rawData,
           track_code: code,
           slip_fileName: filename,
-          timestamp: firebase.database.ServerValue.TIMESTAMP
+          timestamp: ServerValue.TIMESTAMP
         }
       });
-    await firebase
-      .database()
+    await getDatabase(app)
       .ref('lookup')
       .push({
         key: `${(rawData.name as string).trim()}|||${(rawData.telephone as string).trim()}`,
@@ -92,8 +91,7 @@ export const register = functions.https.onCall(async (data, context) => {
 
 export const lookup = functions.https.onCall(async (data, context) => {
   const { name, telephone } = data;
-  const snapshot = (await firebase
-    .database()
+  const snapshot = (await getDatabase(app)
     .ref('lookup')
     .orderByChild('key')
     .equalTo(`${name.trim()}|||${telephone.trim()}`)
