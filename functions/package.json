@@ -17,7 +17,7 @@
     "dataurl": "0.1.0",
     "firebase-admin": "9.11.1",
     "firebase-functions": "3.15.4",
-    "mime-types": "2.1.32",
+    "mime-types": "2.1.33",
     "randomstring": "1.2.1"
   },
   "devDependencies": {
