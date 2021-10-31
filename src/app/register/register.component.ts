@@ -7,8 +7,8 @@ import {
   Validators
 } from '@angular/forms';
 import { TranslocoService } from '@ngneat/transloco';
-import { FirebaseApp } from '@angular/fire';
-import 'firebase/functions';
+import { FirebaseApp } from '@angular/fire/compat';
+import undefined from 'firebase/compat/functions';
 import { RecaptchaComponent } from '../ng-recaptcha';
 import { Observable, combineLatest } from 'rxjs';
 import { first, map, distinctUntilChanged, startWith } from 'rxjs/operators';

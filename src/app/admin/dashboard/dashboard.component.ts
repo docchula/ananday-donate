@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { switchMap, filter, map } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';

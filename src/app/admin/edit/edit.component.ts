@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Observable, combineLatest } from 'rxjs';
 import { map, switchMap, first } from 'rxjs/operators';
-import { FirebaseApp } from '@angular/fire';
-import { AngularFireStorage } from '@angular/fire/storage';
-import firebase from 'firebase/app';
-import 'firebase/database';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { FirebaseApp } from '@angular/fire/compat';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import firebase from 'firebase/compat/app';
+import undefined from 'firebase/compat/database';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
 
 @Component({

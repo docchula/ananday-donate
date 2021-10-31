@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { FirebaseApp } from '@angular/fire';
+import { FirebaseApp } from '@angular/fire/compat';
 import { Router, ActivatedRoute } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { first } from 'rxjs/operators';

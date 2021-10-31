@@ -2,9 +2,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import {
   RECAPTCHA_SETTINGS,
   RecaptchaModule,
@@ -18,7 +18,7 @@ import { TrackingDetailsComponent } from './tracking-details/tracking-details.co
 import { TrackingComponent } from './tracking/tracking.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslocoRootModule } from './transloco-root.module';
 
