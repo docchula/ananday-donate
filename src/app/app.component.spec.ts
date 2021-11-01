@@ -6,14 +6,16 @@ import { TranslocoTestingModule, TranslocoConfig } from '@ngneat/transloco';
 import th from '../assets/i18n/th.json';
 
 const getTranslocoModule = (config: Partial<TranslocoConfig> = {}) => {
-  return TranslocoTestingModule.withLangs(
-    { th },
-    {
+  return TranslocoTestingModule.forRoot({
+    langs: {
+      th
+    },
+    translocoConfig: {
       availableLangs: ['th'],
       defaultLang: 'th',
       ...config
     }
-  );
+  });
 };
 
 describe('AppComponent', () => {
