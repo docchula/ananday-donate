@@ -40,7 +40,7 @@ export function loadScript(
 
   script.src = `${baseUrl}?render=${renderMode}&onload=ng2recaptchaloaded${urlParams}`;
   if (nonce) {
-    // tslint:disable-next-line:no-any Remove "any" cast once we upgrade Angular to 7 and TypeScript along with it
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (script as any).nonce = nonce;
   }
   script.async = true;
@@ -66,7 +66,7 @@ export class RecaptchaLoaderService {
   private nonce: string;
 
   constructor(
-    // tslint:disable-next-line:no-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     @Inject(PLATFORM_ID) private readonly platformId: any,
     @Optional() @Inject(RECAPTCHA_LANGUAGE) language?: string,
     @Optional() @Inject(RECAPTCHA_BASE_URL) baseUrl?: string,

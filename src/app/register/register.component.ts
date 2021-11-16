@@ -8,7 +8,6 @@ import {
 } from '@angular/forms';
 import { TranslocoService } from '@ngneat/transloco';
 import { FirebaseApp } from '@angular/fire/compat';
-import undefined from 'firebase/compat/functions';
 import { RecaptchaComponent } from '../ng-recaptcha';
 import { Observable, combineLatest } from 'rxjs';
 import { first, map, distinctUntilChanged, startWith } from 'rxjs/operators';
@@ -69,7 +68,7 @@ const validateBadgeAmount = (control: AbstractControl) => {
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
   @ViewChild('captchaRef', { static: true }) reCaptcha: RecaptchaComponent;
   registerForm: FormGroup;
   maxBadge$: Observable<number>;
@@ -218,8 +217,6 @@ export class RegisterComponent implements OnInit {
   get slip_file() {
     return this.registerForm.get('slip_file');
   }
-
-  ngOnInit() {}
 
   submit(reCaptchaResponse: string) {
     const rawFormData = this.registerForm.value;

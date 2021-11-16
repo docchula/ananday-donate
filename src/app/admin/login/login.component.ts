@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   loginForm: FormGroup;
 
   constructor(
@@ -22,8 +22,6 @@ export class LoginComponent implements OnInit {
       password: this.fb.control('')
     });
   }
-
-  ngOnInit() {}
 
   submit() {
     this.afa
