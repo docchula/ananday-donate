@@ -45,7 +45,7 @@
     "@types/grecaptcha": "3.0.3",
     "@types/jasmine": "3.10.2",
     "@types/jasminewd2": "2.0.10",
-    "@types/node": "16.11.17",
+    "@types/node": "16.11.19",
     "@typescript-eslint/eslint-plugin": "5.8.1",
     "@typescript-eslint/parser": "5.8.1",
     "eslint": "8.5.0",
