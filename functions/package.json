@@ -13,7 +13,7 @@
   "dependencies": {
     "@types/mime-types": "2.1.1",
     "D": "1.0.0",
-    "axios": "0.24.0",
+    "axios": "0.25.0",
     "dataurl": "0.1.0",
     "firebase-admin": "10.0.2",
     "firebase-functions": "3.16.0",
